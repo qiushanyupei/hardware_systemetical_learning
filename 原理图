@@ -1,1 +1,3 @@
-
+控制器分类：
+1、CPU、MCU（Micro‑Controller Unit，一般处于单片机上，集成的比较好）、GPU、DSP（Digital Signal Processor）、NPU(顺序执行)
+2、FPGA、CPLD（并行执行 ）
