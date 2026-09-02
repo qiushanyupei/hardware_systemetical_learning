@@ -13,3 +13,5 @@ PDR：Power‑Down Reset 掉电复位
 2、RC振荡器：芯片内部用电阻 + 电容通过充放电循环构成 RC 振荡；成本低，不需要外部器件；**精度差、受电压、温度影响很大，频率会飘
 PLL：Phase‑Locked‑Loop(输入参考频率，提高时钟频率，也就是时钟时长更短)
 RTC: Real Time Clock，实时时钟，用来记录年月日时分秒，通常配备晶振，下电后RTC可以通过纽扣电池持续供电，可以一直记录时间
+1. 正常主电源 VCC（Voltage Common‑Collector） 供电时：备份域由 VCC 供电，VBAT（Voltage‑Battery） 引脚可以接纽扣电池（实际工程中可以运行5-10年）。
+2. **主电源掉电 VCC=0V 时**，自动切换到 VBAT 电池供电，只给 RTC 和备份寄存器（下电依然可以存储数据）供电，MCU 其余全部电路断电。
